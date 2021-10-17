@@ -2,18 +2,36 @@ const question = "タマホームのCMで流れているDeep Purpleの曲は？"
 const answers = ["Burn", "Smoke on the Water", "Highway Star", "Black Night"];
 const correct = "Burn";
 
-document.getElementById("js-question").textContent = question;
-
 const $button = document.getElementsByTagName("button");
-$button[0].textContent = answers[0];
-$button[1].textContent = answers[1];
-$button[2].textContent = answers[2];
-$button[3].textContent = answers[3];
+const buttonLength = $button.length;
 
-$button[0].addEventListener("click", () => {
-  if (correct === $button[0].textContent) {
+// 問題文と選択肢を定義して、setupQuiz関数に入れる
+const setupQuiz = () => {
+  document.getElementById("js-question").textContent = question;
+
+  let buttonIndex = 0;
+  while (buttonIndex < buttonLength) {
+    $button[buttonIndex].textContent = answers[buttonIndex];
+    buttonIndex++;
+  }
+};
+
+//関数呼び出し
+setupQuiz();
+
+// ボタンをクリックした時のイベント発火
+const clickHandler = (e) => {
+  if (correct === e.target.textContent) {
     window.alert("正解");
   } else {
     window.alert("不正解");
   }
-});
+};
+
+let handlerIndex = 0;
+while (handlerIndex < buttonLength) {
+  $button[handlerIndex].addEventListener("click", (e) => {
+    clickHandler(e);
+  });
+  handlerIndex++;
+}
