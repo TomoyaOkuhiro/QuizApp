@@ -22,6 +22,38 @@ const quiz = [
     answers: ["Guilty", " Over Sea", "Racer X", "Doubt"],
     correct: "Racer X",
   },
+  {
+    question: "Queenのギタリスト、ブライアン・メイの持っているギターの名前は？",
+    answers: ["Blue Moon", "Yellow Pistol", "Red Special", "Green Fall"],
+    correct: "Red Special",
+  },
+  {
+    question: "90年代に活躍したロックバンドとして、適切でないものを選べ",
+    answers: ["Linkin Park", "Bon Jovi", "Nirvana", "Led Zeppelin"],
+    correct: "Led Zeppelin",
+  },
+  {
+    question: "映画 Bohemian Rhapsodyの世界興行収入は？",
+    answers: ["689億", "1008億", "792億", "935億"],
+    correct: "1008億",
+  },
+  {
+    question: "アメリカ出身ではないロックバンドを次のうちから選びなさい",
+    answers: ["Van Halen", "Anthrax", "Metallica", "The Who"],
+    correct: "The Who",
+  },
+  {
+    question:
+      "AC/DCのボーカルがブライアンジョンソンになったのは、CD何枚目の頃？？",
+    answers: ["6", "3", "7", "5"],
+    correct: "7",
+  },
+  {
+    question:
+      "Queenのギタリスト、ブライアン・メイがピックの代わりに使っていた硬貨は？",
+    answers: ["50 cent", "6 pence", "100 yen", "1 dollar"],
+    correct: "6 pence",
+  },
 ];
 const quizLength = quiz.length;
 let quizIndex = 0;
